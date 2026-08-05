@@ -9,6 +9,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .services { grid-template-columns: repeat(3, 1fr); }
+    .service-card { min-height: 390px; padding: 25px; }
+    .service-icon { font-size: 35px; margin: 30px 0 20px; }
+    .service-card h3 { font-size: 19px; margin-bottom: 14px; }
+    .service-card ul { list-style: none; padding: 0; margin: 0 0 20px; color: #777; font-size: 12px; line-height: 1.75; }
+    .service-card li::before { content: '—'; color: var(--blue); margin-right: 7px; }
+    .service-card:hover ul, .featured ul { color: #bbb; }
+    .featured li::before { color: var(--acid); }
+    @media (max-width: 800px) { .services { grid-template-columns: 1fr 1fr; } .service-card { min-height: 360px; } }
+    @media (max-width: 460px) { .services { grid-template-columns: 1fr; } .service-card:last-child { grid-column: auto; } }
+  </style>
 </head>
 <body>
   <div class="cursor-glow" aria-hidden="true"></div>
@@ -26,9 +38,9 @@
       <div class="hero-image"></div>
       <div class="hero-grid"></div>
       <div class="hero-content">
-        <p class="eyebrow"><span></span> Independent media agency · London / everywhere</p>
+        <p class="eyebrow"><span></span> AJVerseMedia · Media agency / everywhere</p>
         <h1>Media that<br /><em>moves</em> people.</h1>
-        <p class="hero-copy">We turn ambitious ideas into shows, stories and strategies people choose to spend time with.</p>
+        <p class="hero-copy">Podcast · Video Production · Personal Branding · Digital Growth</p>
         <a href="#contact" class="button button-light">Build your next thing <span>↘</span></a>
       </div>
       <div class="hero-bottom">
@@ -39,13 +51,13 @@
 
     <section class="intro section-pad" id="services">
       <p class="section-label">01 / What we make</p>
-      <div class="intro-heading"><h2>Big ideas deserve<br />a <em>bigger signal.</em></h2><p>From the first spark to the last frame, we bring the creative firepower and growth thinking to make your brand impossible to scroll past.</p></div>
+      <div class="intro-heading"><h2>Everything your<br />brand needs to <em>grow.</em></h2><p>From your first podcast to high-performing campaigns, AJVerseMedia creates the content and growth systems that make brands impossible to scroll past.</p></div>
       <div class="services">
-        <article class="service-card featured"><span class="service-number">01</span><div class="service-icon mic">◉</div><h3>Podcasts</h3><p>Formats, production and distribution for conversations that build real loyalty.</p><a href="#contact">Explore audio <span>↗</span></a></article>
-        <article class="service-card"><span class="service-number">02</span><div class="service-icon">▶</div><h3>Video & editing</h3><p>Cut-through films, campaigns and social-native edits with an eye for the replay.</p><a href="#contact">Explore video <span>↗</span></a></article>
-        <article class="service-card"><span class="service-number">03</span><div class="service-icon hash">#</div><h3>Social media</h3><p>Channel strategy and always-on storytelling that earns a place in the feed.</p><a href="#contact">Explore social <span>↗</span></a></article>
-        <article class="service-card"><span class="service-number">04</span><div class="service-icon">↗</div><h3>Digital marketing</h3><p>Campaigns made to connect every touchpoint and turn curiosity into action.</p><a href="#contact">Explore growth <span>↗</span></a></article>
-        <article class="service-card"><span class="service-number">05</span><div class="service-icon search">⌕</div><h3>SEO</h3><p>Search strategy and content systems that make your best work easy to find.</p><a href="#contact">Explore search <span>↗</span></a></article>
+        <article class="service-card featured"><span class="service-number">01</span><div class="service-icon">▶</div><h3>Video Production</h3><ul><li>Professional video editing</li><li>Podcast & YouTube editing</li><li>Instagram Reels & Shorts</li><li>Corporate videos</li><li>Event highlights</li></ul><a href="#contact">Talk video <span>↗</span></a></article>
+        <article class="service-card"><span class="service-number">02</span><div class="service-icon hash">#</div><h3>Social Media Marketing</h3><ul><li>Instagram growth strategy</li><li>Facebook marketing</li><li>LinkedIn branding</li><li>Content calendar</li><li>Organic growth & management</li></ul><a href="#contact">Talk social <span>↗</span></a></article>
+        <article class="service-card"><span class="service-number">03</span><div class="service-icon">✦</div><h3>Personal Branding</h3><ul><li>Brand positioning</li><li>Profile optimization</li><li>Content strategy</li><li>LinkedIn & podcast branding</li><li>Speaker branding</li></ul><a href="#contact">Build your brand <span>↗</span></a></article>
+        <article class="service-card"><span class="service-number">04</span><div class="service-icon">↗</div><h3>Digital Marketing</h3><ul><li>YouTube SEO</li><li>Channel optimization</li><li>Thumbnail design</li><li>Keyword research</li><li>Google Business Profile</li><li>Performance strategy</li></ul><a href="#contact">Talk growth <span>↗</span></a></article>
+        <article class="service-card"><span class="service-number">05</span><div class="service-icon">◎</div><h3>Advertising</h3><ul><li>Meta Ads</li><li>Google Ads strategy</li><li>Lead generation</li><li>Campaign planning</li><li>Brand awareness campaigns</li></ul><a href="#contact">Launch a campaign <span>↗</span></a></article>
       </div>
     </section>
 
