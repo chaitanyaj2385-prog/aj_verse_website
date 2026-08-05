@@ -45,8 +45,21 @@
     .clients { padding: 120px 9vw; background: #eeece6; }
     .clients-top { display: flex; justify-content: space-between; align-items: end; margin-bottom: 55px; }
     .clients-top p:last-child { max-width: 310px; color: #696867; font-size: 14px; line-height: 1.65; }
-    .client-list { display: flex; flex-wrap: wrap; border-top: 1px solid #c7c4bd; border-left: 1px solid #c7c4bd; }
-    .client-list span { flex: 1 1 25%; padding: 28px 20px; border-right: 1px solid #c7c4bd; border-bottom: 1px solid #c7c4bd; font-weight: 800; letter-spacing: -.03em; font-size: 17px; }
+    .client-list { display: grid; grid-template-columns: repeat(12, 1fr); gap: 15px; }
+    .client-card { min-height: 185px; padding: 23px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: transform .25s ease; overflow: hidden; position: relative; }
+    .client-card:hover { transform: translateY(-6px) rotate(-1deg); }
+    .client-card b { position: relative; z-index: 1; font-size: clamp(20px, 2.2vw, 31px); letter-spacing: -.06em; line-height: 1; }
+    .client-card small { position: relative; z-index: 1; font: 10px 'DM Mono', monospace; text-transform: uppercase; opacity: .75; }
+    .client-card::after { content: ''; position: absolute; width: 135px; height: 135px; border-radius: 50%; right: -36px; bottom: -42px; border: 1px solid currentColor; opacity: .4; }
+    .client-card:nth-child(1) { grid-column: span 4; background: var(--ink); color: var(--acid); }
+    .client-card:nth-child(2) { grid-column: span 5; background: var(--blue); color: white; }
+    .client-card:nth-child(3) { grid-column: span 3; background: #ff7544; color: #1b130f; }
+    .client-card:nth-child(4) { grid-column: span 3; background: #d5d0c6; color: var(--ink); }
+    .client-card:nth-child(5) { grid-column: span 4; background: #211d45; color: #b8beff; }
+    .client-card:nth-child(6) { grid-column: span 5; background: #96bd4d; color: #162000; }
+    .client-card:nth-child(7) { grid-column: span 5; background: #f4b8d1; color: #4c1432; }
+    .client-card:nth-child(8) { grid-column: span 3; background: #ffcb54; color: #352300; }
+    .client-card:nth-child(9) { grid-column: span 4; background: #0c777b; color: #d5ffff; }
     footer .social-links { display: flex; gap: 10px; align-items: center; }
     footer .social-links a { display: inline-flex; gap: 7px; align-items: center; border: 1px solid #ffffff3d; border-radius: 30px; padding: 8px 11px; color: #fff; transition: .2s ease; }
     footer .social-links a:hover { border-color: currentColor; transform: translateY(-2px); }
@@ -54,8 +67,8 @@
     footer .social-links .instagram { color: #ff4f8c; border-color: #ff4f8c66; }
     footer .social-links .linkedin { color: #56b8ff; border-color: #56b8ff66; }
     .social-icon { width: 15px; height: 15px; fill: currentColor; flex: 0 0 auto; }
-    @media (max-width: 800px) { .services { grid-template-columns: 1fr 1fr; } .service-card { min-height: 360px; } .founder, .why { grid-template-columns: 1fr; } .founder-panel { min-height: 370px; padding: 70px 8%; } .founder-copy { padding: 75px 8%; } .why { padding: 80px 7vw; gap: 35px; } .process { padding: 80px 7vw; } .process-head, .clients-top { display: block; } .process-note, .clients-top p:last-child { margin-top: 22px; } .process-steps { grid-template-columns: repeat(4, 1fr); } .process-step:nth-child(5) { border-top: 1px solid #ffffff55; } .clients { padding: 80px 7vw; } }
-    @media (max-width: 460px) { .services { grid-template-columns: 1fr; } .service-card:last-child { grid-column: auto; } .benefits { grid-template-columns: 1fr; } .process-steps { grid-template-columns: 1fr 1fr; } .process-step { min-height: 105px; } .process-step:nth-child(n+3) { border-top: 1px solid #ffffff55; } .client-list span { flex-basis: 50%; padding: 21px 14px; font-size: 15px; } }
+    @media (max-width: 800px) { .services { grid-template-columns: 1fr 1fr; } .service-card { min-height: 360px; } .founder, .why { grid-template-columns: 1fr; } .founder-panel { min-height: 370px; padding: 70px 8%; } .founder-copy { padding: 75px 8%; } .why { padding: 80px 7vw; gap: 35px; } .process { padding: 80px 7vw; } .process-head, .clients-top { display: block; } .process-note, .clients-top p:last-child { margin-top: 22px; } .process-steps { grid-template-columns: repeat(4, 1fr); } .process-step:nth-child(5) { border-top: 1px solid #ffffff55; } .clients { padding: 80px 7vw; } .client-card:nth-child(n) { grid-column: span 6; } }
+    @media (max-width: 460px) { .services { grid-template-columns: 1fr; } .service-card:last-child { grid-column: auto; } .benefits { grid-template-columns: 1fr; } .process-steps { grid-template-columns: 1fr 1fr; } .process-step { min-height: 105px; } .process-step:nth-child(n+3) { border-top: 1px solid #ffffff55; } .client-card:nth-child(n) { grid-column: span 12; min-height: 130px; } }
   </style>
 </head>
 <body>
@@ -130,7 +143,7 @@
 
     <section class="clients">
       <div class="clients-top"><div><p class="section-label">07 / Our clients</p><h2>Built for people<br />with <em>something to say.</em></h2></div><p>We partner with ambitious people and organisations ready to grow their voice.</p></div>
-      <div class="client-list"><span>Doctors</span><span>Entrepreneurs</span><span>Business Owners</span><span>Speakers</span><span>Politicians</span><span>Coaches</span><span>Educational Institutes</span><span>Restaurants</span><span>Startups</span></div>
+      <div class="client-list"><article class="client-card"><small>Care & expertise</small><b>Doctors</b></article><article class="client-card"><small>Ideas in motion</small><b>Entrepreneurs</b></article><article class="client-card"><small>Built to lead</small><b>Business Owners</b></article><article class="client-card"><small>Voices that land</small><b>Speakers</b></article><article class="client-card"><small>Public impact</small><b>Politicians</b></article><article class="client-card"><small>Potential unlocked</small><b>Coaches</b></article><article class="client-card"><small>Learning forward</small><b>Educational Institutes</b></article><article class="client-card"><small>Made to gather</small><b>Restaurants</b></article><article class="client-card"><small>Next, now</small><b>Startups</b></article></div>
     </section>
 
     <section class="contact" id="contact">
