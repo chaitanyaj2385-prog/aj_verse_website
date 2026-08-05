@@ -18,8 +18,35 @@
     .service-card li::before { content: '—'; color: var(--blue); margin-right: 7px; }
     .service-card:hover ul, .featured ul { color: #bbb; }
     .featured li::before { color: var(--acid); }
-    @media (max-width: 800px) { .services { grid-template-columns: 1fr 1fr; } .service-card { min-height: 360px; } }
-    @media (max-width: 460px) { .services { grid-template-columns: 1fr; } .service-card:last-child { grid-column: auto; } }
+    .founder { display: grid; grid-template-columns: .85fr 1.15fr; background: #141518; color: white; }
+    .founder-panel { padding: 110px 16%; background: linear-gradient(150deg, #2d3cc6, #121319 65%); min-height: 560px; display: flex; flex-direction: column; justify-content: flex-end; }
+    .founder-mark { color: var(--acid); font: 700 clamp(64px, 9vw, 135px)/.7 'Playfair Display', serif; letter-spacing: -.08em; }
+    .founder-panel p { font: 11px 'DM Mono', monospace; margin: 24px 0 0; color: #d7d7d7; text-transform: uppercase; }
+    .founder-copy { padding: 100px 12%; display: flex; flex-direction: column; justify-content: center; }
+    .founder-copy h2, .why h2, .process h2, .clients h2 { margin: 18px 0 20px; font-size: clamp(43px, 5vw, 72px); line-height: .96; letter-spacing: -.065em; }
+    .founder-copy h2 em, .why h2 em, .process h2 em, .clients h2 em { font-family: 'Playfair Display', serif; font-weight: 600; }
+    .founder-role { color: var(--acid); font: 11px 'DM Mono', monospace; text-transform: uppercase; }
+    .founder-copy > p:not(.section-label):not(.founder-role) { color: #b8b8b8; line-height: 1.75; font-size: 14px; max-width: 550px; }
+    .why { padding: 120px 9vw; display: grid; grid-template-columns: .85fr 1.15fr; gap: 10vw; align-items: start; }
+    .why h2 { margin-top: 18px; }
+    .benefits { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #c7c4bd; }
+    .benefit { border-bottom: 1px solid #c7c4bd; padding: 22px 10px; font-size: 14px; font-weight: 700; }
+    .benefit::before { content: '✓'; color: var(--blue); margin-right: 12px; font-size: 17px; }
+    .process { padding: 115px 9vw; background: var(--blue); color: white; }
+    .process-head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 65px; }
+    .process h2 { margin-bottom: 0; }
+    .process-note { max-width: 240px; font-size: 13px; line-height: 1.6; color: #dfe2ff; }
+    .process-steps { display: grid; grid-template-columns: repeat(7, 1fr); }
+    .process-step { min-height: 145px; padding: 17px; border-left: 1px solid #ffffff55; display: flex; flex-direction: column; justify-content: space-between; font-size: 14px; font-weight: 800; }
+    .process-step:last-child { border-right: 1px solid #ffffff55; }
+    .process-step b { font: 10px 'DM Mono', monospace; color: var(--acid); }
+    .clients { padding: 120px 9vw; background: #eeece6; }
+    .clients-top { display: flex; justify-content: space-between; align-items: end; margin-bottom: 55px; }
+    .clients-top p:last-child { max-width: 310px; color: #696867; font-size: 14px; line-height: 1.65; }
+    .client-list { display: flex; flex-wrap: wrap; border-top: 1px solid #c7c4bd; border-left: 1px solid #c7c4bd; }
+    .client-list span { flex: 1 1 25%; padding: 28px 20px; border-right: 1px solid #c7c4bd; border-bottom: 1px solid #c7c4bd; font-weight: 800; letter-spacing: -.03em; font-size: 17px; }
+    @media (max-width: 800px) { .services { grid-template-columns: 1fr 1fr; } .service-card { min-height: 360px; } .founder, .why { grid-template-columns: 1fr; } .founder-panel { min-height: 370px; padding: 70px 8%; } .founder-copy { padding: 75px 8%; } .why { padding: 80px 7vw; gap: 35px; } .process { padding: 80px 7vw; } .process-head, .clients-top { display: block; } .process-note, .clients-top p:last-child { margin-top: 22px; } .process-steps { grid-template-columns: repeat(4, 1fr); } .process-step:nth-child(5) { border-top: 1px solid #ffffff55; } .clients { padding: 80px 7vw; } }
+    @media (max-width: 460px) { .services { grid-template-columns: 1fr; } .service-card:last-child { grid-column: auto; } .benefits { grid-template-columns: 1fr; } .process-steps { grid-template-columns: 1fr 1fr; } .process-step { min-height: 105px; } .process-step:nth-child(n+3) { border-top: 1px solid #ffffff55; } .client-list span { flex-basis: 50%; padding: 21px 14px; font-size: 15px; } }
   </style>
 </head>
 <body>
@@ -77,8 +104,28 @@
       <div class="method-copy"><p class="section-label">03 / Our approach</p><h2>Instinct meets <em>intelligence.</em></h2><p>We pair cultural instinct with practical insight. That means each idea is creatively alive, strategically sharp, and measured against what actually matters.</p><div class="principles"><div><b>01</b><span>Make it worth their time</span></div><div><b>02</b><span>Build for the real world</span></div><div><b>03</b><span>Keep getting smarter</span></div></div></div>
     </section>
 
+    <section class="founder">
+      <div class="founder-panel"><span class="founder-mark">AJ</span><p>Founder / Creative strategist / Podcast host</p></div>
+      <div class="founder-copy"><p class="section-label">04 / Meet the founder</p><h2>Ajinkya<br /><em>Vyawahare</em></h2><p class="founder-role">Founder | Creative Strategist | Podcast Host</p><p>With years of experience in podcast production, content creation, YouTube growth and social media branding, Ajinkya has helped entrepreneurs, professionals, military officers, doctors, educators, politicians and industry leaders create impactful digital content.</p><p>His mission is simple: <strong>help businesses become brands.</strong></p></div>
+    </section>
+
+    <section class="why">
+      <div><p class="section-label">05 / Why AJVerseMedia</p><h2>Built for<br /><em>better stories.</em></h2></div>
+      <div class="benefits"><div class="benefit">Professional Editing</div><div class="benefit">Fast Delivery</div><div class="benefit">Creative Storytelling</div><div class="benefit">SEO Optimized Videos</div><div class="benefit">Branding Strategy</div><div class="benefit">Content Planning</div><div class="benefit">Dedicated Support</div><div class="benefit">Premium Quality</div></div>
+    </section>
+
+    <section class="process">
+      <div class="process-head"><div><p class="section-label">06 / Our process</p><h2>From first call<br />to <em>real growth.</em></h2></div><p class="process-note">A clear, collaborative process designed to keep great work moving.</p></div>
+      <div class="process-steps"><div class="process-step"><b>01</b><span>Discovery Call</span></div><div class="process-step"><b>02</b><span>Strategy</span></div><div class="process-step"><b>03</b><span>Shoot <small>(if required)</small></span></div><div class="process-step"><b>04</b><span>Editing</span></div><div class="process-step"><b>05</b><span>Client Feedback</span></div><div class="process-step"><b>06</b><span>Delivery</span></div><div class="process-step"><b>07</b><span>Growth Strategy</span></div></div>
+    </section>
+
+    <section class="clients">
+      <div class="clients-top"><div><p class="section-label">07 / Our clients</p><h2>Built for people<br />with <em>something to say.</em></h2></div><p>We partner with ambitious people and organisations ready to grow their voice.</p></div>
+      <div class="client-list"><span>Doctors</span><span>Entrepreneurs</span><span>Business Owners</span><span>Speakers</span><span>Politicians</span><span>Coaches</span><span>Educational Institutes</span><span>Restaurants</span><span>Startups</span></div>
+    </section>
+
     <section class="contact" id="contact">
-      <div class="contact-orb"></div><p class="section-label">04 / Let’s make noise</p><h2>Have a story<br />worth <em>sharing?</em></h2><p>Tell us what’s on your mind. We’ll bring the coffee and a few very good questions.</p><a class="button button-dark" href="mailto:hello@ajversemedia.com">hello@ajversemedia.com <span>↗</span></a>
+      <div class="contact-orb"></div><p class="section-label">08 / Let’s make noise</p><h2>Have a story<br />worth <em>sharing?</em></h2><p>Tell us what’s on your mind. We’ll bring the coffee and a few very good questions.</p><a class="button button-dark" href="mailto:hello@ajversemedia.com">hello@ajversemedia.com <span>↗</span></a>
     </section>
   </main>
   <footer><a class="logo" href="#top">AJ Verse <span>Media</span></a><p>© 2025 AJ Verse Media. Made to resonate.</p><div><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#top">Back to top ↑</a></div></footer>
