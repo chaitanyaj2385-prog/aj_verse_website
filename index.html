@@ -67,8 +67,23 @@
     footer .social-links .instagram { color: #ff4f8c; border-color: #ff4f8c66; }
     footer .social-links .linkedin { color: #56b8ff; border-color: #56b8ff66; }
     .social-icon { width: 15px; height: 15px; fill: currentColor; flex: 0 0 auto; }
-    @media (max-width: 800px) { .services { grid-template-columns: 1fr 1fr; } .service-card { min-height: 360px; } .founder, .why { grid-template-columns: 1fr; } .founder-panel { min-height: 370px; padding: 70px 8%; } .founder-copy { padding: 75px 8%; } .why { padding: 80px 7vw; gap: 35px; } .process { padding: 80px 7vw; } .process-head, .clients-top { display: block; } .process-note, .clients-top p:last-child { margin-top: 22px; } .process-steps { grid-template-columns: repeat(4, 1fr); } .process-step:nth-child(5) { border-top: 1px solid #ffffff55; } .clients { padding: 80px 7vw; } .client-card:nth-child(n) { grid-column: span 6; } }
-    @media (max-width: 460px) { .services { grid-template-columns: 1fr; } .service-card:last-child { grid-column: auto; } .benefits { grid-template-columns: 1fr; } .process-steps { grid-template-columns: 1fr 1fr; } .process-step { min-height: 105px; } .process-step:nth-child(n+3) { border-top: 1px solid #ffffff55; } .client-card:nth-child(n) { grid-column: span 12; min-height: 130px; } }
+    .contact-content { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 430px); gap: 7vw; align-items: end; }
+    .contact-intro > p:not(.section-label) { margin-bottom: 0; }
+    .contact-details { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 24px; font-size: 13px; font-weight: 800; }
+    .contact-details a { color: var(--ink); text-decoration: none; border-bottom: 1px solid #1116; padding-bottom: 3px; }
+    .contact-form { background: #101113; color: #fff; padding: 28px; box-shadow: 10px 10px 0 #a3cf00; }
+    .contact-form h3 { margin: 0 0 20px; font-size: 20px; letter-spacing: -.04em; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-field { display: grid; gap: 7px; margin-bottom: 13px; }
+    .form-field label { font: 10px 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; color: #c5c5c5; }
+    .form-field input, .form-field textarea { width: 100%; border: 1px solid #ffffff42; border-radius: 0; background: #1c1d20; color: #fff; padding: 12px; font: 13px Manrope, sans-serif; outline: none; }
+    .form-field textarea { min-height: 92px; resize: vertical; }
+    .form-field input:focus, .form-field textarea:focus { border-color: var(--acid); }
+    .contact-form .button { border: 0; cursor: pointer; margin-top: 4px; }
+    .form-status { margin: 15px 0 0; font-size: 13px; line-height: 1.55; color: var(--acid); }
+    .form-status[hidden] { display: none; }
+    @media (max-width: 800px) { .services { grid-template-columns: 1fr 1fr; } .service-card { min-height: 360px; } .founder, .why, .contact-content { grid-template-columns: 1fr; } .founder-panel { min-height: 370px; padding: 70px 8%; } .founder-copy { padding: 75px 8%; } .why { padding: 80px 7vw; gap: 35px; } .process { padding: 80px 7vw; } .process-head, .clients-top { display: block; } .process-note, .clients-top p:last-child { margin-top: 22px; } .process-steps { grid-template-columns: repeat(4, 1fr); } .process-step:nth-child(5) { border-top: 1px solid #ffffff55; } .clients { padding: 80px 7vw; } .client-card:nth-child(n) { grid-column: span 6; } .contact-content { gap: 38px; } }
+    @media (max-width: 460px) { .services { grid-template-columns: 1fr; } .service-card:last-child { grid-column: auto; } .benefits { grid-template-columns: 1fr; } .process-steps { grid-template-columns: 1fr 1fr; } .process-step { min-height: 105px; } .process-step:nth-child(n+3) { border-top: 1px solid #ffffff55; } .client-card:nth-child(n) { grid-column: span 12; min-height: 130px; } .contact-form { padding: 22px; } .form-row { grid-template-columns: 1fr; gap: 0; } }
   </style>
 </head>
 <body>
